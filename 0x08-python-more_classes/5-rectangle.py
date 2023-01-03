@@ -47,7 +47,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    # Functions
+# Functions
     def area(self):
         """ Returns area of rectangle
         """
@@ -61,7 +61,7 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
-def __str__(self):
+    def __str__(self):
         """ print() __str__ method funtion to return rectangle in char '#'
         """
         res = ""
