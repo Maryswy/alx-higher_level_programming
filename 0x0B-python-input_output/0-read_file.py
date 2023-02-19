@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""read_file
+"""
+This file contains a function to print
+text file to stdout without import
 """
 
 
 def read_file(filename=""):
-    """Takes in str filename to read it
     """
-
-    with open(filename, encoding="utf-8") as readFile:
-        print(readFile.read(), end='')
-
+    This function reads a text file and prints it stdout
+    """
+    with open(filename, encoding="utf-8") as myFile:
+        for line in myFile:
+            print(line, end="")
