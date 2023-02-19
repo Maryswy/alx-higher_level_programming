@@ -1,9 +1,19 @@
 #!/usr/bin/python3
-"""Module that appends a file"""
+"""
+This file contains functions that
+reads n lines of a txt file and prints
+it to stdout
+"""
 
 
-def append_write(filename="", text=""):
-    """Append a file"""
-    with open(filename, mode='a', encoding='UTF-8') as append_write:
-        append_write.write(text)
-        return len(text)
+def read_lines(filename="", nb_lines=0):
+    """
+    function that reads n lines
+    """
+    i = 0
+    with open(filename, encoding="utf-8") as myFile:
+        for line in myFile:
+            i += 1
+            print(line, end="")
+            if nb_lines == i:
+                break
