@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""Module that represents object as JSON"""
+"""
+This file contains function that
+writes a string to text file and returns
+number of characters written
+"""
 
 
-import json
-
-
-def to_json_string(my_obj):
-    """Represent object as JSON"""
-    return json.dumps(my_obj)
-
+def write_file(filename="", text=""):
+    """
+    function to write to files
+    """
+    with open(filename, mode="w", encoding="utf-8") as myFile:
+        return (myFile.write(str(text)))
